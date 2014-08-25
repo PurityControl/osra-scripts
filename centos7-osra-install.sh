@@ -36,7 +36,7 @@ ruby_ver=`grep ^ruby Gemfile | cut -d ' ' -f 2 | tr -d "'"`
 rvm install ruby-$ruby_ver
 
 #install all the gems
-rvm use $ruby-ver
+rvm use $ruby_ver
 gem install bundler
 bundle install --without production
 
