@@ -9,7 +9,7 @@ Installation Instructions
   ```
   source name-of-script.sh
   ```
-- you will be asked for your password to execute sudo commands
+- sudo will ask you for your password to execute the sudo commands that run in the script. The sudo password is not stored by the script at any point.
 - the script should install leaving you with a working osra environment
 
 If you run into difficulty do not panick - go to the osra slack channel and ask for help!
