@@ -13,3 +13,24 @@ Installation Instructions
 - the script should install leaving you with a working osra environment
 
 If you run into difficulty do not panick - go to the osra slack channel and ask for help!
+
+Packages Installed
+==================
+Each operating system has to have different packages installed but the following packages are required in order to set up the osra environment.
+
+If you do not want any of these packages installed on your system you will need to cherry pick from the script to suit your own needs.
+
+- Bash if not already installed (needed for rvm and to source the script)
+- sudo if not already installed
+- curl if not already installed (needed to download rvm)
+- postgresql
+- rvm
+- git
+
+TO DO
+=====
+
+- Make the scripts idempotent (particularly appending to .profile and .bash_profile)
+- implement puppet?
+- Vagrantfile for vagrant boxes?
+
