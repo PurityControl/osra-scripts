@@ -41,8 +41,6 @@ gem install bundler
 bundle install --without production
 
 # setup the osra database
-bundle exec rake db:create
-bundle exec rake db:schema:load
-bundle exec rake db:seed
+bundle exec rake db:setup
 bundle exec rake db:test:prepare
 
