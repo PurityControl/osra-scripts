@@ -31,6 +31,10 @@ TO DO
 =====
 
 - Add headless javascript driver dependencies for Phantomjs and CapybaraWebkit
+  - [x] ubuntu
+  - [ ] centos7
+  - [ ] freebsd
+  - [ ] openbsd
 - Make the scripts idempotent (particularly appending to .profile and .bash_profile)
 - implement puppet?
 - Vagrantfile for vagrant boxes?
