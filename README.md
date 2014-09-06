@@ -26,6 +26,11 @@ If you do not want any of these packages installed on your system you will need 
 - postgresql
 - rvm
 - git
+- node
+- npm
+- phantomjs
+- qt4 (Dev)
+- xvfb
 
 TO DO
 =====
