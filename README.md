@@ -1,6 +1,11 @@
 osra-scripts
 ============
 
+Broken Scripts
+==============
+Additional dependencies have temporarily broken the centos and BSD scripts. The only scripts that can
+setup the latest osra branches are the ubuntu ones inlcuding the vagrant setups. See the TO DO section.
+
 Installation Instructions
 =========================
 
@@ -31,6 +36,11 @@ If you do not want any of these packages installed on your system you will need 
 - phantomjs
 - qt4 (Dev)
 - xvfb
+
+Vagrant
+=======
+Vagrant files now exist for setting up a fully fledged osra enviroment by downloading the vagrant files
+and simpley issuing the `vagrant up` command. Of course to do this you need vagrant and its requirements installed on the machine.
 
 TO DO
 =====
