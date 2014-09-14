@@ -40,7 +40,7 @@ If you do not want any of these packages installed on your system you will need 
 Vagrant
 =======
 Vagrant files now exist for setting up a fully fledged osra enviroment by downloading the vagrant files
-and simpley issuing the `vagrant up` command. Of course to do this you need vagrant and its requirements installed on the machine.
+and simpley issuing the `vagrant up` command. Of course to do this you need vagrant and its requirements installed on the machine. See our [wiki page] (https://github.com/PurityControl/osra-scripts/wiki/Vagrant-Installs) for more information.
 
 TO DO
 =====
