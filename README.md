@@ -53,4 +53,7 @@ TO DO
 - Make the scripts idempotent (particularly appending to .profile and .bash_profile)
 - implement puppet?
 - Vagrantfile for vagrant boxes?
-
+  - [x] ubuntu
+  - [ ] centos7
+  - [ ] freebsd
+  - [ ] openbsd
