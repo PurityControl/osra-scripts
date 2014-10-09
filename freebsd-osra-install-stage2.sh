@@ -21,4 +21,3 @@ bundle install --without production
 
 # setup the osra database
 bundle exec rake db:setup
-bundle exec rake db:test:prepare
