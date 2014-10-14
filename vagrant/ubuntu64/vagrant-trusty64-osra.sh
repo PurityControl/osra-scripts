@@ -1,21 +1,32 @@
+function install_rvm {
+  # if rvm is installed don't install it again
+  which rvm
+  if [ $? -ne 0 ]
+  then
+    #download and install rvm
+    \curl -sSL https://get.rvm.io | bash -s stable
+
+    # load rvm on login
+    echo '' >> ~/.bash_profile
+    echo '#source profile for rvm' >> ~/.bash_profile 
+    echo 'source ~/.profile' >> ~/.bash_profile 
+    
+    #load rvm to run now
+    . ~/.bash_profile
+    
+    # install all packages needed to let rvm do its job
+    rvm requirements run
+  else
+    echo "rvm already installed, skippping ......."
+  fi
+}
+
 #ask for the sudo password at the start and immediately update the package library
 echo 'about to ask for the sudo password so the script can install some things'
 sudo echo 'thankyou continuing with the script...'
 sudo apt-get update
 
-#download and install rvm
-\curl -sSL https://get.rvm.io | bash -s stable
-
-# load rvm on login
-echo '' >> ~/.bash_profile
-echo '#source profile for rvm' >> ~/.bash_profile 
-echo 'source ~/.profile' >> ~/.bash_profile 
-
-#load rvm to run now
-. ~/.bash_profile
-
-# install all packages needed to let rvm do its job
-rvm requirements run
+install_rvm
 
 # install other necessary packages
 sudo apt-get install -y  git postgresql-9.3 libpq-dev nodejs nodejs-legacy npm \
@@ -42,4 +53,5 @@ bundle install --without production
 
 # setup the osra database
 bundle exec rake db:setup
+
 
