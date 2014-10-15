@@ -1,3 +1,7 @@
+CLONE_GIT_URL=https://github.com/AgileVentures/osra.git
+CLONE_DIR_NAME=osra
+CLONE_ABS_PATH="/vagrant/$CLONE_DIR_NAME"
+
 function install_rvm {
   # if rvm is installed don't install it again
   which rvm
@@ -38,9 +42,18 @@ sudo cp /var/lib/pgsql/data/pg_hba.conf /var/lib/pgsql/data/pg_hba.conf.orig
 sudo sed -i -e 's/local\s\+all\s\+postgres\s\+peer/local all postgres trust/g' /etc/postgresql/9.3/main/pg_hba.conf 
 sudo service postgresql reload
 
-#clone osra and cd into it
-git clone https://github.com/AgileVentures/osra.git /vagrant/osra
-cd /vagrant/osra
+#clone project and cd into it if the directory isn't there
+if [ ! -d  CLONE_ABS_PATH ]
+then
+  echo "no $CLONE_DIR_NAME project at $CLONE_ABS_PATH - cloning it now...."
+  git clone $CLONE_GIT_URL $CLONE_ABS_PATH
+  cd $CLONE_ABS_PATH
+  git remote rename origin upstream
+  git remote set-url --push upstream "cannot push here ..."
+  echo "master project has been renamed to upstream"
+  echo "you will need to set origin to your own downstream repoi with ..."
+  echo "git remote add origin YOUR_GIT_URL_HERE"
+fi
 
 # install ruby version needed for osra
 ruby_ver=`grep ^ruby Gemfile | cut -d ' ' -f 2 | tr -d "'"`
@@ -53,5 +66,4 @@ bundle install --without production
 
 # setup the osra database
 bundle exec rake db:setup
-
 
