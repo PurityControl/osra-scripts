@@ -43,7 +43,7 @@ sudo sed -i -e 's/local\s\+all\s\+postgres\s\+peer/local all postgres trust/g' /
 sudo service postgresql reload
 
 #clone project and cd into it if the directory isn't there
-if [ ! -d  CLONE_ABS_PATH ]
+if [ ! -d  $CLONE_ABS_PATH ]
 then
   echo "no $CLONE_DIR_NAME project at $CLONE_ABS_PATH - cloning it now...."
   git clone $CLONE_GIT_URL $CLONE_ABS_PATH
