@@ -35,7 +35,15 @@ install_rvm
 # install other necessary packages
 sudo apt-get install -y  git postgresql-9.3 libpq-dev nodejs nodejs-legacy npm \
      qt4-dev-tools libqt4-dev libqt4-core libqt4-gui xvfb
-sudo npm install -g phantomjs
+
+# only install phantomjs if it isn't already installed
+which phantomjs
+if [ $? -ne 0 ]
+then
+  sudo npm install -g phantomjs
+else
+  echo "phantomjs already installed, skipping ....."
+fi
 
 #setup postgres
 sudo cp /var/lib/pgsql/data/pg_hba.conf /var/lib/pgsql/data/pg_hba.conf.orig
