@@ -4,6 +4,8 @@ CLONE_ABS_PATH="/vagrant/$CLONE_DIR_NAME"
 
 function install_rvm {
   # if rvm is installed don't install it again
+  # source profile so if installed rvm script is availalble
+  . ~/.bash_profile
   which rvm
   if [ $? -ne 0 ]
   then
