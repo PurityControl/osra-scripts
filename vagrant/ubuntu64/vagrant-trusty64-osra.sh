@@ -63,6 +63,8 @@ then
   echo "master project has been renamed to upstream"
   echo "you will need to set origin to your own downstream repoi with ..."
   echo "git remote add origin YOUR_GIT_URL_HERE"
+else
+  cd $CLONE_ABS_PATH
 fi
 
 # install ruby version needed for osra
