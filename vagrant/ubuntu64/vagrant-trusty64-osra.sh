@@ -14,12 +14,12 @@ function install_rvm {
 
     # load rvm on login
     echo '' >> ~/.bash_profile
-    echo '#source profile for rvm' >> ~/.bash_profile 
-    echo 'source ~/.profile' >> ~/.bash_profile 
-    
+    echo '#source profile for rvm' >> ~/.bash_profile
+    echo 'source ~/.profile' >> ~/.bash_profile
+
     #load rvm to run now
     . ~/.bash_profile
-    
+
     # install all packages needed to let rvm do its job
     rvm requirements run
   else
@@ -49,7 +49,7 @@ fi
 
 #setup postgres
 sudo cp /var/lib/pgsql/data/pg_hba.conf /var/lib/pgsql/data/pg_hba.conf.orig
-sudo sed -i -e 's/local\s\+all\s\+postgres\s\+peer/local all postgres trust/g' /etc/postgresql/9.3/main/pg_hba.conf 
+sudo sed -i -e 's/local\s\+all\s\+postgres\s\+peer/local all postgres trust/g' /etc/postgresql/9.3/main/pg_hba.conf
 sudo service postgresql reload
 
 #clone project and cd into it if the directory isn't there
