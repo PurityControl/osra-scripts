@@ -30,6 +30,8 @@ sudo service postgresql reload
 #clone osra and cd into it
 git clone https://github.com/AgileVentures/osra.git
 cd osra
+git remote rename origin upstream
+git remote set-url --push upstream "cannot push here ..."
 
 # install ruby version needed for osra
 ruby_ver=`grep ^ruby Gemfile | cut -d ' ' -f 2 | tr -d "'"`
