@@ -23,7 +23,7 @@ sudo apt-get install -y  git postgresql-9.3 libpq-dev nodejs nodejs-legacy npm \
 sudo npm install -g phantomjs
 
 #setup postgres
-sudo cp /var/lib/pgsql/data/pg_hba.conf /var/lib/pgsql/data/pg_hba.conf.orig
+sudo cp /etc/postgresql/9.3/main/pg_hba.conf /etc/postgresql/9.3/main/pg_hba.conf.orig
 sudo sed -i -e 's/local\s\+all\s\+postgres\s\+peer/local all postgres trust/g' /etc/postgresql/9.3/main/pg_hba.conf 
 sudo service postgresql reload
 
