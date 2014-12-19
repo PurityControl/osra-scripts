@@ -59,6 +59,6 @@ TO DO
   - [ ] openbsd
 - rvm needs gpg key installed before it can be installed
   - [x] ubuntu
-  - [ ] centos7
+  - [x] centos7
   - [ ] freebsd
   - [ ] openbsd
