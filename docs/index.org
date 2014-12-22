@@ -1,1 +1,5 @@
 Index of Org Documentation
+
+* Capybara and qt-webkit dependencies
+See our [[capybara.org][section]] on getting the capybara gem working
+
