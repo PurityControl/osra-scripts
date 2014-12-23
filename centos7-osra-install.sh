@@ -22,6 +22,7 @@ rvm requirements run
 # install other necessary packages
 sudo yum -y install git postgresql-devel postgresql-server xorg-x11-server-Xvfb
 sudo yum -y install http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+sudo sed -i -e "s/enabled=1/enabled=0/g" /etc/yum.repos.d/epel.repo
 sudo yum -y install nodejs npm qt5-qtwebkit-devel --enablerepo=epel
 sudo npm install -g phantomjs
 
