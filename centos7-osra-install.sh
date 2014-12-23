@@ -8,8 +8,10 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 
 # load rvm on login
 echo '' >> ~/.bash_profile
-echo '#source profile for rvm' >> ~/.bash_profile 
-echo 'source ~/.profile' >> ~/.bash_profile 
+echo '#source profile for rvm' >> ~/.bash_profile
+echo 'source ~/.profile' >> ~/.bash_profile
+echo '#setup qmake environment variable' >> ~/.bash_profile
+echo 'export QMAKE=/usr/bin/qmake-qt5' >> ~/.bash_profile
 
 #load rvm to run now
 . ~/.bash_profile
@@ -18,9 +20,10 @@ echo 'source ~/.profile' >> ~/.bash_profile
 rvm requirements run
 
 # install other necessary packages
-sudo yum -y install git postgresql-devel postgresql-server
-sudo yum -y install http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
-sudo yum -y install nodejs npm --enablerepo=epel
+sudo yum -y install git postgresql-devel postgresql-server xorg-x11-server-Xvfb
+sudo yum -y install http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+sudo yum -y install nodejs npm qt5-qtwebkit-devel --enablerepo=epel
+sudo npm install -g phantomjs
 
 #setup postgres
 sudo postgresql-setup initdb
