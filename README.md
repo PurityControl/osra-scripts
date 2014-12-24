@@ -3,8 +3,8 @@ osra-scripts
 
 Broken Scripts
 ==============
-Additional dependencies have temporarily broken the centos and BSD scripts. The only scripts that can
-setup the latest osra branches are the ubuntu ones inlcuding the vagrant setups. See the TO DO section.
+Additional dependencies have temporarily broken the BSD scripts. The only scripts that can
+setup the latest osra branches are the linux ones inlcuding the vagrant setups. See the TO DO section.
 
 Installation Instructions
 =========================
@@ -47,7 +47,8 @@ TO DO
 
 - Add headless javascript driver dependencies for Phantomjs and CapybaraWebkit
   - [x] ubuntu
-  - [ ] centos7
+  - [x] centos7
+  - [x] fedora21
   - [ ] freebsd
   - [ ] openbsd
 - Make the scripts idempotent (particularly appending to .profile and .bash_profile)
@@ -60,5 +61,6 @@ TO DO
 - rvm needs gpg key installed before it can be installed
   - [x] ubuntu
   - [x] centos7
+  - [x] fedora21
   - [ ] freebsd
   - [ ] openbsd
