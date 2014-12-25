@@ -1,3 +1,25 @@
 Capybara Information
 
-capybara information goes here
+* qt webkit dependency
+The installation of the capybara gem requires the qt implementation of webkit to be installed.
+This can be problematic for some operating systems. Sometimes this needs to be compiled from
+source or to have non standard package repositories enabled.
+The information below is designed to highlight the various methods that can be used to install
+the dependencies needed in order to get the capybara gem installed on your system.
+
+** Resources
+- see the 
+  [[https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit][thoughtbot page]] 
+  discussing this.
+
+** Ways to install qt webkit
+*** Install from os packages
+*** Run the downloadable binary
+*** Compiler from source
+
+** Operating System Specific Information
+*** Ubuntu
+*** Fedora21
+*** Centos
+*** FreeBSD
+*** OpenBSD
