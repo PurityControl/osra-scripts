@@ -1,4 +1,4 @@
-Capybara Information
+#+TITLE: Capybara Information
 
 * qt webkit dependency
 The installation of the capybara gem requires the qt implementation of webkit to be installed.
