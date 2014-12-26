@@ -1,4 +1,4 @@
-* Index of Org Documentation
+#+TITLE: Index of Org Documentation
 
 See the following sections for more information on things that can cause issues wiht setting up
 and osra environment
