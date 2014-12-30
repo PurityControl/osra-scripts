@@ -1,26 +1,27 @@
-osra-scripts
-============
+#+TITLE: osra-scripts
 
-Broken Scripts
-==============
+
+* Broken Scripts
+
 Additional dependencies have temporarily broken the BSD scripts. The only scripts that can
 setup the latest osra branches are the linux ones inlcuding the vagrant setups. See the TO DO section.
 
-Installation Instructions
-=========================
+* Installation Instructions
+
 
 - Pick the script relevant for your operating system
 - source the script
-  ```
+  #+BEGIN_SRC 
   source name-of-script.sh
-  ```
+  #+END_SRC
+
 - sudo will ask you for your password to execute the sudo commands that run in the script. The sudo password is not stored by the script at any point.
 - the script should install leaving you with a working osra environment
 
 If you run into difficulty do not panick - go to the osra slack channel and ask for help!
 
-Packages Installed
-==================
+* Packages Installed
+
 Each operating system has to have different packages installed but the following packages are required in order to set up the osra environment.
 
 If you do not want any of these packages installed on your system you will need to cherry pick from the script to suit your own needs.
@@ -37,13 +38,13 @@ If you do not want any of these packages installed on your system you will need 
 - qt4 (Dev)
 - xvfb
 
-Vagrant
-=======
+* Vagrant
+
 Vagrant files now exist for setting up a fully fledged osra enviroment by downloading the vagrant files
 and simpley issuing the `vagrant up` command. Of course to do this you need vagrant and its requirements installed on the machine. See our [wiki page] (https://github.com/PurityControl/osra-scripts/wiki/Vagrant-Installs) for more information.
 
-TO DO
-=====
+* TO DO
+
 
 - Add headless javascript driver dependencies for Phantomjs and CapybaraWebkit
   - [x] ubuntu
