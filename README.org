@@ -41,27 +41,27 @@ If you do not want any of these packages installed on your system you will need 
 * Vagrant
 
 Vagrant files now exist for setting up a fully fledged osra enviroment by downloading the vagrant files
-and simpley issuing the `vagrant up` command. Of course to do this you need vagrant and its requirements installed on the machine. See our [wiki page] (https://github.com/PurityControl/osra-scripts/wiki/Vagrant-Installs) for more information.
+and simpley issuing the `vagrant up` command. Of course to do this you need vagrant and its requirements installed on the machine. See our [[https://github.com/PurityControl/osra-scripts/wiki/Vagrant-Installs][Wiki Page]] for more information.
 
 * TO DO
 
 
-- Add headless javascript driver dependencies for Phantomjs and CapybaraWebkit
+** TODO Add headless javascript driver dependencies for Phantomjs and CapybaraWebkit
   - [X] ubuntu
   - [X] centos7
   - [X] fedora21
   - [ ] freebsd
   - [ ] openbsd
-- Make the scripts idempotent (particularly appending to .profile and .bash_profile)
-- implement puppet?
-- Vagrantfile for vagrant boxes?
-  - [X] ubuntu
-  - [ ] centos7
-  - [ ] freebsd
-  - [ ] openbsd
-- rvm needs gpg key installed before it can be installed
-  - [X] ubuntu
-  - [X] centos7
-  - [X] fedora21
-  - [ ] freebsd
-  - [ ] openbsd
+  - Make the scripts idempotent (particularly appending to .profile and .bash_profile)
+  - implement puppet?
+  - Vagrantfile for vagrant boxes?
+    - [X] ubuntu
+    - [ ] centos7
+    - [ ] freebsd
+    - [ ] openbsd
+  - rvm needs gpg key installed before it can be installed
+    - [X] ubuntu
+    - [X] centos7
+    - [X] fedora21
+    - [ ] freebsd
+    - [ ] openbsd
