@@ -38,6 +38,22 @@ If you do not want any of these packages installed on your system you will need 
 - qt4 (Dev)
 - xvfb
 
+* RVM
+
+For rvm to work it needs to run in a login shell. If you use a standard terminal
+emulator it is probably not set up to run as a login shell. The standard
+terminal emulator for gnome is the "Terminal" application. Follow the
+instructions below to make "Terminal" run as a login shell. If you are 
+using a different terminal emulator refer to its documentation on how to
+do this.
+
+- Open Terminal
+- Select Edit -> Profile Preferences
+- Go to the  "Title and Command" tab 
+- select the "Run command as a login shell" checkbox
+- click the close button
+- shut down "Terminal" then relaunch it.
+
 * Vagrant
 
 Vagrant files now exist for setting up a fully fledged osra enviroment by downloading the vagrant files
