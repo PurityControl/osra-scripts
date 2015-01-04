@@ -1,6 +1,11 @@
 CLONE_GIT_URL=https://github.com/AgileVentures/osra.git
 CLONE_DIR_NAME=osra
-CLONE_ABS_PATH="/vagrant/$CLONE_DIR_NAME"
+if [ -d /vagrant ]
+then
+  CLONE_ABS_PATH="/vagrant/$CLONE_DIR_NAME"
+else
+  CLONE_ABS_PATH="$HOME/$CLONE_DIR_NAME"
+fi
 
 function install_rvm {
   # if rvm is installed don't install it again
@@ -33,11 +38,11 @@ echo 'about to ask for the sudo password so the script can install some things'
 sudo echo 'thankyou continuing with the script...'
 sudo apt-get update
 
-install_rvm
-
 # install other necessary packages
 sudo apt-get install -y  git postgresql-9.3 libpq-dev nodejs nodejs-legacy npm \
-     qt4-dev-tools libqt4-dev libqt4-core libqt4-gui xvfb
+     qt4-dev-tools libqt4-dev libqt4-core libqt4-gui xvfb curl
+
+install_rvm
 
 # only install phantomjs if it isn't already installed
 which phantomjs
