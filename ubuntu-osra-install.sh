@@ -2,26 +2,26 @@
 echo 'about to ask for the sudo password so the script can install some things'
 sudo echo 'thankyou continuing with the script...'
 
+# install other necessary packages
+sudo apt-get update
+sudo apt-get install -y  git postgresql-9.3 libpq-dev nodejs nodejs-legacy npm \
+     qt4-dev-tools libqt4-dev libqt4-core libqt4-gui xvfb curl
+sudo npm install -g phantomjs
+
 #download and install rvm
 gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 \curl -sSL https://get.rvm.io | bash -s stable
 
 # load rvm on login
 echo '' >> ~/.bash_profile
-echo '#source profile for rvm' >> ~/.bash_profile 
-echo 'source ~/.profile' >> ~/.bash_profile 
+echo '#source profile for rvm' >> ~/.bash_profile
+echo 'source ~/.profile' >> ~/.bash_profile
 
 #load rvm to run now
 . ~/.bash_profile
 
 # install all packages needed to let rvm do its job
 rvm requirements run
-
-# install other necessary packages
-sudo apt-get update
-sudo apt-get install -y  git postgresql-9.3 libpq-dev nodejs nodejs-legacy npm \
-     qt4-dev-tools libqt4-dev libqt4-core libqt4-gui xvfb
-sudo npm install -g phantomjs
 
 #setup postgres
 sudo cp /etc/postgresql/9.3/main/pg_hba.conf /etc/postgresql/9.3/main/pg_hba.conf.orig
