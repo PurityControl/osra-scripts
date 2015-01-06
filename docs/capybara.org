@@ -2,18 +2,41 @@
 
 * qt webkit dependency
 The installation of the capybara gem requires the qt implementation of webkit to be installed.
+This installation needs to include the development files required to build qt so that the
+gem can be compiled against it.
 This can be problematic for some operating systems. Sometimes this needs to be compiled from
 source or to have non standard package repositories enabled.
 The information below is designed to highlight the various methods that can be used to install
 the dependencies needed in order to get the capybara gem installed on your system.
 
 ** Resources
-- see the 
-  [[https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit][thoughtbot page]] 
+- see the
+  [[https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit][thoughtbot page]]
   discussing this.
 
 ** Ways to install qt webkit
 *** Install from os packages
+
+**** availiable with the default repos
+
+Ubuntu and Fedora have the packages needed to install the qt webkit development
+right out of the box.
+=sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui=
+=sudo yum install qt5-qtwebkit-devel=
+
+**** available with additional repos
+
+For Centos 7 you will first need to install the epel repository
+
+=sudo yum -y install http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm=
+=sudo sed -i -e "s/enabled=1/enabled=0/g" /etc/yum.repos.d/epel.repo=
+
+The second line ensures the epel repository has to be selected
+as part of the yum command for the epel repository to be accessible
+Then the packaga is installed with.
+
+=sudo yum -y install nodejs npm qt5-qtwebkit-devel --enablerepo=epel=
+
 *** Run the downloadable binary
 *** Compiler from source
 
