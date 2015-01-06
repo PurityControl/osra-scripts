@@ -35,7 +35,7 @@ The second line ensures the epel repository has to be selected
 as part of the yum command for the epel repository to be accessible
 Then the packaga is installed with.
 
-= sudo yum -y install nodejs npm qt5-qtwebkit-devel --enablerepo=epel =
+=sudo yum -y install nodejs npm qt5-qtwebkit-devel --enablerepo=epel=
 
 *** Run the downloadable binary
 *** Compiler from source
