@@ -61,23 +61,4 @@ and simpley issuing the `vagrant up` command. Of course to do this you need vagr
 
 * TO DO
 
-
-** TODO Add headless javascript driver dependencies for Phantomjs and CapybaraWebkit
-  - [X] ubuntu
-  - [X] centos7
-  - [X] fedora21
-  - [ ] freebsd
-  - [ ] openbsd
-  - Make the scripts idempotent (particularly appending to .profile and .bash_profile)
-  - implement puppet?
-  - Vagrantfile for vagrant boxes?
-    - [X] ubuntu
-    - [ ] centos7
-    - [ ] freebsd
-    - [ ] openbsd
-  - rvm needs gpg key installed before it can be installed
-    - [X] ubuntu
-    - [X] centos7
-    - [X] fedora21
-    - [ ] freebsd
-    - [ ] openbsd
+ See our [[file:docs/todo.org][TO DO tasks]] int the docs folder
