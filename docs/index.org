@@ -3,6 +3,8 @@
 See the following sections for more information on things that can cause issues wiht setting up
 and osra environment
 
-** Capybara and qt-webkit dependencies
+* [[file:todo.org][TODO list]]
+
+* Capybara and qt-webkit dependencies
 See our [[file:capybara.org][section]] on getting the capybara gem working
 

@@ -1,0 +1,25 @@
+#+TITLE: TODO
+
+* TODO Add headless javascript driver dependencies for Phantomjs and CapybaraWebkit
+  - [X] ubuntu
+  - [X] centos7
+  - [X] fedora21
+  - [ ] freebsd
+  - [ ] openbsd
+
+* TODO Make the scripts idempotent (particularly appending to .profile and .bash_profile)
+ 
+* TODO implement puppet?
+
+* TODO Vagrantfile for vagrant boxes?
+  - [X] ubuntu
+  - [ ] centos7
+  - [ ] freebsd
+  - [ ] openbsd
+
+* TODO rvm needs gpg key installed before it can be installed
+  - [X] ubuntu
+  - [X] centos7
+  - [X] fedora21
+  - [ ] freebsd
+  - [ ] openbsd
